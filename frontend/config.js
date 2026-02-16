@@ -33,7 +33,7 @@ const CONFIG = {
      * - Онлайн: https://www.uuidgenerator.net/
      * - Командная строка: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
      */
-    API_TOKEN: 3ba7a2a2-3cf1-4beb-9280-9235fa33d2be
+    API_TOKEN: "3ba7a2a2-3cf1-4beb-9280-9235fa33d2be"
 };
 
 // Экспортируем для использования в script.js

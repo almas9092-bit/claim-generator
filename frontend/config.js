@@ -13,7 +13,7 @@
 const CONFIG = {
     /**
      * URL webhook из n8n
-     * Формат: https://your-n8n-instance.com/webhook/generate-claims
+     * Формат: https://sak365.app.n8n.cloud/webhook-test/generate-claims
      *
      * Как получить:
      * 1. Откройте ваш workflow в n8n
@@ -33,7 +33,7 @@ const CONFIG = {
      * - Онлайн: https://www.uuidgenerator.net/
      * - Командная строка: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
      */
-    API_TOKEN: "your-secret-token-here"
+    API_TOKEN: 3ba7a2a2-3cf1-4beb-9280-9235fa33d2be
 };
 
 // Экспортируем для использования в script.js

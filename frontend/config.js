@@ -20,7 +20,7 @@ const CONFIG = {
      * 2. Нажмите на узел "Webhook"
      * 3. Скопируйте "Production URL" или "Test URL"
      */
-    WEBHOOK_URL: "https://sak365.app.n8n.cloud/webhook-test/generate-claims",
+    WEBHOOK_URL: "https://sak365.app.n8n.cloud/webhook/generate-claims",
 
     /**
      * Секретный токен для аутентификации

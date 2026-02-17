@@ -203,14 +203,22 @@ async function handleSubmit() {
         }
 
         // Парсим JSON ответ
-        const result = await response.json();
+const rawResult = await response.json();
 
-        // Обрабатываем ответ
-        if (result.success) {
-            showSuccess(result);
-        } else {
-            showError(result.message || 'Произошла неизвестная ошибка');
-        }
+// n8n может вернуть массив или объект - обрабатываем оба случая
+const result = Array.isArray(rawResult) ? rawResult[0] : rawResult;
+
+// Для отладки (можно удалить потом)
+console.log('Ответ от сервера:', result);
+console.log('folderUrl:', result.folderUrl);
+console.log('success:', result.success);
+
+// Обрабатываем ответ
+if (result && result.success) {
+    showSuccess(result);
+} else {
+    showError(result?.message || 'Произошла неизвестная ошибка');
+}
 
     } catch (error) {
         console.error('Ошибка при отправке:', error);

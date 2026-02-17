@@ -276,10 +276,6 @@ function showSuccess(result) {
     // Устанавливаем ссылку на папку
     folderLink.href = result.folderUrl;
 
-    // Очищаем форму для новой загрузки
-    setTimeout(() => {
-        clearFile();
-    }, 1000);
 }
 
 /**

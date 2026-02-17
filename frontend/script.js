@@ -278,12 +278,21 @@ function showSuccess(result) {
     statusSuccess.style.display = 'block';
 
     // Формируем сообщение
-    const message = `Готово! Успешно создано ${result.documentsCount} ${getDocumentWord(result.documentsCount)}.`;
+    const count = result.documentsCount || 0;
+    const message = `Готово! Успешно создано ${count} ${getDocumentWord(count)}.`;
     successMessage.textContent = message;
 
     // Устанавливаем ссылку на папку
-    folderLink.href = result.folderUrl;
+    if (result.folderUrl && result.folderUrl !== 'undefined') {
+        folderLink.href = result.folderUrl;
+        folderLink.target = '_blank';
+        folderLink.style.display = 'inline-flex';
+    } else {
+        folderLink.style.display = 'none';
+    }
 
+    // НЕ очищаем файл автоматически!
+    // Пользователь сам нажмет кнопку когда захочет
 }
 
 /**
